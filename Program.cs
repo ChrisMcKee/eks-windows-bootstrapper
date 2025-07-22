@@ -33,7 +33,7 @@ class Program
         builder.Logging.AddEventLog(x =>
         {
             x.SourceName = "EKS Windows Bootstrapper";
-            x.Filter = (source, logLevel) => logLevel >= LogLevel.Information; // Modify the log level to include LogLevel.Information
+            x.Filter = (source, logLevel) => logLevel >= LogLevel.Information;
         });
         builder.Services.AddWindowsService(options =>
         {
